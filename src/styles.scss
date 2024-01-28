@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+/* Estilos globais que não dependem do tema */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Responsividade e outros estilos globais */
+@media (min-width: 600px) {
+  body {
+    font-size: 1.2em; /* Ajuste o tamanho da fonte para telas maiores */
+  }
+}
