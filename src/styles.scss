@@ -1,15 +1,87 @@
 @import url('https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
 @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css');
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+@import '../src/app/shared/theme/theme.scss';
 
 /* Estilos globais que não dependem do tema */
 body {
   font-family: 'Roboto', sans-serif;
 }
 
-/* Responsividade e outros estilos globais */
 @media (min-width: 600px) {
   body {
-    font-size: 1.2em; /* Ajuste o tamanho da fonte para telas maiores */
+    font-size: 1.2em; 
   }
+}
+
+/* Aplicação dos estilos de tema */
+.dark-theme {
+  --cor-fundo: var(--cor-fundo-dark);
+  --cor-texto: var(--cor-texto-dark);
+  --navbar-fundo: var(--navbar-fundo-dark);
+  --navbar-texto: var(--navbar-texto-dark);
+  --navbar-botao-fundo: var(--navbar-botao-fundo-dark);
+  --navbar-botao-texto: var(--navbar-botao-texto-dark);
+  --navbar-botao-hover-fundo: var(--navbar-botao-hover-fundo-dark);
+  --navbar-botao-hover-texto: var(--navbar-botao-hover-texto-dark);
+  --navbar-img-borda: var(--navbar-img-borda-dark);
+  --sombra-navbar: var(--sombra-navbar-dark);
+  --footer-fundo: var(--footer-fundo-dark);
+  --footer-texto: var(--footer-texto-dark);
+  --footer-icone-cor: var(--footer-icone-cor-dark);
+  --footer-icone-hover-cor: var(--footer-icone-hover-cor-dark);
+  --botao-fundo: var(--botao-fundo-dark);
+  --botao-texto: var(--botao-texto-dark);
+  --botao-hover-fundo: var(--botao-hover-fundo-dark);
+  --botao-hover-texto: var(--botao-hover-texto-dark);
+  --link-cor: var(--link-cor-dark);
+  --link-hover-cor: var(--link-hover-cor-dark);
+  --borda-cor: var(--borda-cor-dark);
+  --input-fundo: var(--input-fundo-dark);
+  --input-texto: var(--input-texto-dark);
+  --input-borda: var(--input-borda-dark);
+  --alerta-fundo: var(--alerta-fundo-dark);
+  --alerta-texto: var(--alerta-texto-dark);
+}
+
+.light-theme {
+  --cor-fundo: var(--cor-fundo-light);
+  --cor-texto: var(--cor-texto-light);
+  --navbar-fundo: var(--navbar-fundo-light);
+  --navbar-texto: var(--navbar-texto-light);
+  --navbar-botao-fundo: var(--navbar-botao-fundo-light);
+  --navbar-botao-texto: var(--navbar-botao-texto-light);
+  --navbar-botao-hover-fundo: var(--navbar-botao-hover-fundo-light);
+  --navbar-botao-hover-texto: var(--navbar-botao-hover-texto-light);
+  --navbar-img-borda: var(--navbar-img-borda-light);
+  --sombra-navbar: var(--sombra-navbar-light);
+  --footer-fundo: var(--footer-fundo-light);
+  --footer-texto: var(--footer-texto-light);
+  --footer-icone-cor: var(--footer-icone-cor-light);
+  --footer-icone-hover-cor: var(--footer-icone-hover-cor-light);
+  --botao-fundo: var(--botao-fundo-light);
+  --botao-texto: var(--botao-texto-light);
+  --botao-hover-fundo: var(--botao-hover-fundo-light);
+  --botao-hover-texto: var(--botao-hover-texto-light);
+  --link-cor: var(--link-cor-light);
+  --link-hover-cor: var(--link-hover-cor-light);
+  --borda-cor: var(--borda-cor-light);
+  --input-fundo: var(--input-fundo-light);
+  --input-texto: var(--input-texto-light);
+  --input-borda: var(--input-borda-light);
+  --alerta-fundo: var(--alerta-fundo-light);
+  --alerta-texto: var(--alerta-texto-light);
+}
+
+/* Estilos que dependem do tema */
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+}
+
+/* Estilos específicos para a navbar e footer */
+.navbar-container, .footer {
+  background-color: var(--navbar-fundo);
+  color: var(--navbar-texto);
+  /* Adicione aqui outros estilos para a navbar e footer */
 }

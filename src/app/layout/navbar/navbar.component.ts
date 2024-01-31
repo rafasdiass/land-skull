@@ -1,22 +1,49 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild, HostListener } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
 import { ThemeService } from '../../shared/service/theme.service';
-import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss'
+  styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
+  @ViewChild('navbarToggler') navbarToggler!: ElementRef<HTMLButtonElement>;
+  @ViewChild('navbarNav') navbarNav!: ElementRef<HTMLDivElement>;
 
-constructor(private router: Router, private themeService: ThemeService) {}
+  constructor(private router: Router, private themeService: ThemeService) {}
 
-navegarPara(rota: string) {
-  this.router.navigate([rota]);
-}
+  navegarPara(rota: string): void {
+    this.router.navigate([rota]);
+    this.closeNavbar();
+  }
 
-toggleTheme(): void {
-  this.themeService.toggleTheme();
-}
+  toggleTheme(): void {
+    this.themeService.toggleTheme();
+  }
+
+  toggleNavbar(): void {
+    if (this.navbarToggler && this.navbarNav) {
+      this.navbarToggler.nativeElement.classList.toggle('collapsed');
+      this.navbarNav.nativeElement.classList.toggle('show');
+    }
+  }
+
+  closeNavbar(): void {
+    if (this.navbarToggler && this.navbarNav) {
+      this.navbarToggler.nativeElement.classList.add('collapsed');
+      this.navbarNav.nativeElement.classList.remove('show');
+    }
+  }
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent): void {
+    if (this.navbarToggler && this.navbarNav &&
+        !this.navbarToggler.nativeElement.contains(event.target as Node) &&
+        !this.navbarNav.nativeElement.contains(event.target as Node)) {
+      this.closeNavbar();
+    }
+  }
 }

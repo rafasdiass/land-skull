@@ -1,78 +1,67 @@
-/* Tema Escuro */
-.dark-theme {
-    --cor-fundo: #333333;
-    --cor-texto: #f0f0f0;
-  
-    /* Cores específicas para a navbar no tema escuro */
-    --navbar-fundo: rgba(94, 90, 90, 0.8);
-    --navbar-texto: #ffffff;
-    --navbar-botao-fundo: #b6b6b6;
-    --navbar-botao-texto: #ffffff;
-    --navbar-botao-hover-fundo: #FFFFFF;
-    --navbar-botao-hover-texto: #292929;
-    --navbar-img-borda: 2px #0d007d;
-    --sombra-navbar: 0 -4px 8px rgba(255, 255, 255, 0.5), 0 4px 8px rgba(255, 255, 255, 0.5); /* Sombra branca para tema escuro */
-    --sombra-botao: 0 8px 16px rgba(255, 255, 255, 0.7); /* Sombra branca para botões no tema escuro */
-  
-    /* Cores específicas para o footer no tema escuro */
-    --footer-fundo: #434343;
-    --footer-texto: #f0f0f0;
-    --footer-icone-cor: #f0f0f0;
-    --footer-icone-hover-cor: #007bff;
-  
-    --botao-fundo: #4e4e4e;
-    --botao-texto: #ffffff;
-    --botao-hover-fundo: #666666;
-    --botao-hover-texto: #ffffff;
-    --link-cor: #1e90ff;
-    --link-hover-cor: #0d76d8;
-    --borda-cor: #555555;
-  
-    --input-fundo: #555; // Exemplo de cor de fundo para o input no tema escuro
-    --input-texto: #f0f0f0; // Exemplo de cor do texto para o input no tema escuro
-    --input-borda: #777; // Exemplo de cor da borda para o input no tema escuro
-    --alerta-fundo: #dc3545; // Exemplo de cor de fundo para alertas de erro no tema escuro
-    --alerta-texto: #f0f0f0; // Exemplo de cor do texto para alertas de erro no tema escuro
-  
-  }
-  
-  /* Tema Claro */
-  .light-theme {
-    --cor-fundo: #cecece;
-    --cor-texto: #333333;
-  
-    /* Cores específicas para a navbar no tema claro */
-    --navbar-fundo: rgba(255, 255, 255, 0.8);
-    --navbar-texto: #333333;
-    --navbar-botao-fundo: #e6e6e6;
-    --navbar-botao-texto: #333333;
-    --navbar-botao-hover-fundo: #d4d4d4;
-    --navbar-botao-hover-texto: #0d007d;
-    --navbar-img-borda: 2px #292929;
-    --sombra-navbar: 0 -4px 8px rgba(0, 0, 0, 0.5), 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra preta para tema claro */
-    --sombra-botao: 0 8px 16px rgba(0, 0, 0, 0.7); /* Sombra preta para botões no tema claro */
-  
-    /* Cores específicas para o footer no tema claro */
-    --footer-fundo: #d9d9da;
-    --footer-texto: #333333;
-    --footer-icone-cor: #333333;
-    --footer-icone-hover-cor: #007bff;
-  
-    --botao-fundo: #f2f2f2;
-    --botao-texto: #333333;
-    --botao-hover-fundo: #e6e6e6;
-    --botao-hover-texto: #333333;
-    --link-cor: #007bff;
-    --link-hover-cor: #0056b3;
-    --borda-cor: #dddddd;
-  
-    --input-fundo: #fff; // Cor de fundo para o input no tema claro
-    --input-texto: #333; // Cor do texto para o input no tema claro
-    --input-borda: #ccc; // Cor da borda para o input no tema claro
-    --alerta-fundo: #dc3545; // Cor de fundo para alertas de erro no tema claro
-    --alerta-texto: #fff; // Cor do texto para alertas de erro no tema claro
-    
-  }
-  
-  
-  
+/* Definições das variáveis para o Tema Escuro */
+:root {
+  --cor-fundo-dark: #333333;
+  --cor-texto-dark: #f0f0f0;
+
+  --navbar-fundo-dark: rgba(94, 90, 90, 0.8);
+  --navbar-texto-dark: #ffffff;
+  --navbar-botao-fundo-dark: #b6b6b6;
+  --navbar-botao-texto-dark: #ffffff;
+  --navbar-botao-hover-fundo-dark: #FFFFFF;
+  --navbar-botao-hover-texto-dark: #292929;
+  --navbar-img-borda-dark: 2px #0d007d;
+  --sombra-navbar-dark: 0 -4px 8px rgba(255, 255, 255, 0.5), 0 4px 8px rgba(255, 255, 255, 0.5);
+
+  --footer-fundo-dark: #434343;
+  --footer-texto-dark: #f0f0f0;
+  --footer-icone-cor-dark: #f0f0f0;
+  --footer-icone-hover-cor-dark: #007bff;
+
+  --botao-fundo-dark: #4e4e4e;
+  --botao-texto-dark: #ffffff;
+  --botao-hover-fundo-dark: #666666;
+  --botao-hover-texto-dark: #ffffff;
+  --link-cor-dark: #1e90ff;
+  --link-hover-cor-dark: #0d76d8;
+  --borda-cor-dark: #555555;
+
+  --input-fundo-dark: #555;
+  --input-texto-dark: #f0f0f0;
+  --input-borda-dark: #777;
+  --alerta-fundo-dark: #dc3545;
+  --alerta-texto-dark: #f0f0f0;
+}
+
+/* Definições das variáveis para o Tema Claro */
+:root {
+  --cor-fundo-light: #cecece;
+  --cor-texto-light: #333333;
+
+  --navbar-fundo-light: rgba(255, 255, 255, 0.8);
+  --navbar-texto-light: #333333;
+  --navbar-botao-fundo-light: #e6e6e6;
+  --navbar-botao-texto-light: #333333;
+  --navbar-botao-hover-fundo-light: #d4d4d4;
+  --navbar-botao-hover-texto-light: #0d007d;
+  --navbar-img-borda-light: 2px #292929;
+  --sombra-navbar-light: 0 -4px 8px rgba(0, 0, 0, 0.5), 0 4px 8px rgba(0, 0, 0, 0.5);
+
+  --footer-fundo-light: #d9d9da;
+  --footer-texto-light: #333333;
+  --footer-icone-cor-light: #333333;
+  --footer-icone-hover-cor-light: #007bff;
+
+  --botao-fundo-light: #f2f2f2;
+  --botao-texto-light: #333333;
+  --botao-hover-fundo-light: #e6e6e6;
+  --botao-hover-texto-light: #333333;
+  --link-cor-light: #007bff;
+  --link-hover-cor-light: #0056b3;
+  --borda-cor-light: #dddddd;
+
+  --input-fundo-light: #fff;
+  --input-texto-light: #333;
+  --input-borda-light: #ccc;
+  --alerta-fundo-light: #dc3545;
+  --alerta-texto-light: #fff;
+}
