@@ -6,6 +6,11 @@
 /* Estilos globais que não dependem do tema */
 body {
   font-family: 'Roboto', sans-serif;
+  /* Estilos que dependem do tema */
+
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+
 }
 
 @media (min-width: 600px) {
@@ -73,15 +78,3 @@ body {
   --alerta-texto: var(--alerta-texto-light);
 }
 
-/* Estilos que dependem do tema */
-body {
-  background-color: var(--cor-fundo);
-  color: var(--cor-texto);
-}
-
-/* Estilos específicos para a navbar e footer */
-.navbar-container, .footer {
-  background-color: var(--navbar-fundo);
-  color: var(--navbar-texto);
-  /* Adicione aqui outros estilos para a navbar e footer */
-}
