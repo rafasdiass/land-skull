@@ -1,0 +1,43 @@
+@import 'bootstrap/scss/bootstrap';
+
+$primary-color: #141414; // Branco para itens principais
+$secondary-color: #6c757d; // Cinza claro para itens secundários
+$background-color: rgba(0, 0, 0, 0.8); // Preto com menos transparência para o fundo
+
+.navbar {
+  background-color: var(--cor-fundo);
+
+  .navbar-brand,
+  .nav-link {
+    color:  var(--cor-texto);
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+
+  .navbar-toggler {
+    .navbar-toggler-icon {
+      // Usando branco para os ícones do toggler
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23f8f9fa' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+  }
+
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        i {
+          color: $secondary-color; // Ícones em cinza claro
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: $background-color;
+  }
+}
+
+// Personalize outras partes do navbar conforme necessário
