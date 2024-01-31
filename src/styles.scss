@@ -12,6 +12,10 @@ body {
   color: var(--cor-texto);
 
 }
+.navbar {
+  background-color: var(--navbar-fundo) ;
+}
+
 
 @media (min-width: 600px) {
   body {
